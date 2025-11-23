@@ -35,7 +35,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'npm'
+          # cache: 'npm' <--- REMOVED THIS LINE to fix the error
           
       - name: Install dependencies
         run: npm install
