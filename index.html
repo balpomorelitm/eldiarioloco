@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de Noticias Locas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,700;1,400&family=Playfair+Display:wght@400;700;900&family=Bangers&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Merriweather', 'serif'],
+              news: ['Playfair Display', 'serif'],
+              display: ['Bangers', 'cursive'],
+            },
+            colors: {
+              'paper': '#f4f1ea',
+              'ink': '#1a1a1a',
+              'unit8': '#e9d5ff', // Lilac/Blueish hint
+              'unit8-dark': '#7e22ce',
+              'unit9': '#fbcfe8', // Pink/Magenta hint
+              'unit9-dark': '#be185d',
+              'unit10': '#e5e7eb', // Grey
+              'unit10-dark': '#374151',
+            },
+            animation: {
+              'print': 'printIn 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+            },
+            keyframes: {
+              printIn: {
+                '0%': { opacity: 0, transform: 'scale(1.5) rotate(-5deg) translateY(20px)', filter: 'blur(4px)' },
+                '100%': { opacity: 1, transform: 'scale(1) rotate(0deg) translateY(0)', filter: 'blur(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .dice-shake {
+        animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+      }
+      @keyframes shake {
+        10%, 90% { transform: translate3d(-1px, 0, 0) rotate(-1deg); }
+        20%, 80% { transform: translate3d(2px, 0, 0) rotate(2deg); }
+        30%, 50%, 70% { transform: translate3d(-4px, 0, 0) rotate(-4deg); }
+        40%, 60% { transform: translate3d(4px, 0, 0) rotate(4deg); }
+      }
+      .newspaper-shadow {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 5px 5px 15px rgba(0,0,0,0.15);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-100 text-slate-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

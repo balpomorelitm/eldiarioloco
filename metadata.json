@@ -1,0 +1,5 @@
+{
+  "name": "Generador de Noticias Locas",
+  "description": "Una herramienta interactiva para estudiantes de español que genera titulares aleatorios combinando gramática y vocabulario de las unidades 8, 9 y 10 (Salud, Historia, Pasado).",
+  "requestFramePermissions": []
+}
